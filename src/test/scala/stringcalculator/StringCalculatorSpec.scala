@@ -10,6 +10,10 @@ class StringCalculatorSpec extends WordSpec with MustMatchers {
       new StringCalculator("").add mustEqual 0
     }
 
+    "return 1 for 1" in {
+      new StringCalculator("1").add mustEqual 1
+    }
+
   }
 
 }
