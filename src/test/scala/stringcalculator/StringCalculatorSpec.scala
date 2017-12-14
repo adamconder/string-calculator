@@ -31,7 +31,7 @@ class StringCalculatorSpec extends WordSpec with MustMatchers {
     }
 
     "accept a custom delimiter" in {
-      new StringCalculator("//;1;2").add mustEqual 3
+      new StringCalculator("//;\n1;2").add mustEqual 3
     }
 
   }
