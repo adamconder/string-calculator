@@ -2,6 +2,10 @@ package stringcalculator
 
 class StringCalculator(rawdigits : String) {
 
+  val negativeNumbers = numbers.filter(_ < 0)
+
+  require(negativeNumbers isEmpty)
+
   def add = (0 /: numbers)(_+_)
 
   private def numbers = digits split ",|\n" map(_.toInt)
