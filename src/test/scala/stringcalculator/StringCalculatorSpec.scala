@@ -14,7 +14,9 @@ class StringCalculatorSpec extends WordSpec with MustMatchers {
       new StringCalculator("1").add mustEqual 1
     }
 
-    
+    "return 42 for 42" in {
+      new StringCalculator("42").add mustEqual 42
+    }
 
   }
 
