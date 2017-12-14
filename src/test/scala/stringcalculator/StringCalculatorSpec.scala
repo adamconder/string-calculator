@@ -34,6 +34,12 @@ class StringCalculatorSpec extends WordSpec with MustMatchers {
       new StringCalculator("//;\n1;2").add mustEqual 3
     }
 
+    "throw an IllegalArgumentException when provided negative numbers" in {
+      intercept[IllegalArgumentException] {
+        new StringCalculator("1,-2,-3").add
+      }
+    }
+
   }
 
 }
