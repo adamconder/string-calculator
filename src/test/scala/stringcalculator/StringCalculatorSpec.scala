@@ -26,9 +26,11 @@ class StringCalculatorSpec extends WordSpec with MustMatchers {
       new StringCalculator("1,2,3").add mustEqual 6
     }
 
-    "accept custom new line as a delimiter" in {
+    "accept new line as a delimiter" in {
       new StringCalculator("1\n2").add mustEqual 3
     }
+
+
 
   }
 
