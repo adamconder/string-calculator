@@ -4,7 +4,7 @@ class StringCalculator(rawdigits : String) {
 
   val negativeNumbers = numbers.filter(_ < 0)
 
-  require(negativeNumbers isEmpty)
+  require(negativeNumbers.isEmpty, negativeNumbers.mkString(","))
 
   def add = (0 /: numbers)(_+_)
 

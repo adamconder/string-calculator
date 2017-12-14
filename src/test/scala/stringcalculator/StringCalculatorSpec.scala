@@ -40,6 +40,13 @@ class StringCalculatorSpec extends WordSpec with MustMatchers {
       }
     }
 
+    "show negative numbers in the exception thrown" in {
+      val exception = intercept[IllegalArgumentException] {
+        new StringCalculator("1,-2,-3").add
+      }
+      exception.getMessage mustEqual "requirement failed: -2,-3"
+    }
+
   }
 
 }
